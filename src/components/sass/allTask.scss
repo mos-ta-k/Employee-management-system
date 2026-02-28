@@ -1,0 +1,17 @@
+.all-task {
+  width: 80%;
+  margin: auto;
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    font-size: var(--medium-font);
+    color: var(--white);
+    .status {
+      color: var(--orange);
+      font-weight: 400;
+    }
+  }
+}

@@ -2,12 +2,15 @@
   width: 80%;
   margin: auto;
   .tasks {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 2rem;
     margin-top: 5rem;
+    flex-wrap: wrap;
     .task {
       background: var(--blue);
+      min-width: 20rem;
+      width: 20%;
       padding: var(--spacing-large);
       border-radius: var(--border-radius-medium);
       color: var(--white);
