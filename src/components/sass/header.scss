@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 100px;
+  background: var(--blue);
+  box-shadow: var(--box-shadow);
+  h1 {
+    font-size: var(--medium-font);
+    color: var(--white);
+    span {
+      color: var(--orange);
+      font-size: 2rem;
+    }
+  }
+}
+.button {
+  padding: 9px 20px;
+  background: transparent;
+  border: 2px solid var(--white);
+  font-size: var(--medium-font);
+  border-radius: var(--border-radius-medium);
+  font-size: var(--medium-font);
+  color: var(--white);
+  &:hover {
+    color: var(--orange);
+    cursor: pointer;
+  }
+}
