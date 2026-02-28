@@ -1,0 +1,85 @@
+.adminDashboard {
+  form {
+    width: 80%;
+    margin: 3rem auto;
+    padding: var(--spacing-large);
+    border-radius: var(--border-radius-medium);
+    background: var(--blue);
+    box-shadow: var(--box-shadow);
+
+    .add-task-title {
+      font-size: var(--xlarge-font);
+      color: var(--white);
+      margin-bottom: var(--spacing-large);
+    }
+    .left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-small);
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-small);
+        margin-bottom: var(--spacing-large);
+        label {
+          font-size: var(--medium-font);
+          color: var(--white);
+        }
+        input {
+          padding: var(--spacing-small);
+          border-radius: var(--border-radius-small);
+          border: none;
+          background-color: transparent;
+          outline: none;
+          color: var(--white);
+          border-bottom: 1px solid var(--white);
+          font-size: var(--medium-font);
+        }
+      }
+    }
+
+    .right {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-small);
+      margin-bottom: var(--spacing-large);
+      label {
+        font-size: var(--medium-font);
+        color: var(--white);
+        margin-bottom: 0.5rem;
+      }
+      textarea {
+        padding: var(--spacing-small);
+        border-radius: var(--border-radius-small);
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
+        font-size: var(--medium-font);
+        border-left: 1px solid var(--white);
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  gap: var(--spacing-small);
+  justify-content: space-between;
+  position: relative;
+}
+
+.add-task-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.description-label {
+  margin-bottom: 0.5rem;
+  font-size: var(--medium-font);
+}
