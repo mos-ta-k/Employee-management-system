@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     .task {
       background: var(--blue);
+      flex: 1;
       min-width: 20rem;
       width: 20%;
       padding: var(--spacing-large);

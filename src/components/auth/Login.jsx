@@ -1,62 +1,62 @@
-import { useState } from 'react'
-import '../styles/login.min.css'
+/* eslint-disable no-unused-vars */
+import { useState } from "react";
+import "../styles/login.min.css";
 
+const Login = ({ handleLogin }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
-const Login = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+    handleLogin(email, password);
+    setEmail("");
+    setPassword("");
+  };
 
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [message, setMessage] = useState("")
-
-    const submitHandler = (e) =>{
-        e.preventDefault();
-        console.log("fhaaaaaaaaa!!")
-        console.log("Your form is submitted");
-
-        setEmail("")
-        setPassword("")
-        setMessage("fahhhhh!! form submitted!")
-    }
-      
-  return (   
+  return (
     <div className="login-page">
       <div className="login-container">
-
-    <form className="login-form"
-    onSubmit={(e)=>{
-        submitHandler(e);
-    }}
-    >
-        <h2>Login</h2>
-        <div className="input-box">
-            <input type="email" required
-                value = {email}
-            onChange={(e)=>{
+        <form
+          className="login-form"
+          onSubmit={(e) => {
+            submitHandler(e);
+          }}
+        >
+          <h2>Login</h2>
+          <div className="input-box">
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => {
                 setEmail(e.target.value);
-            }}
+              }}
             />
             <label>Email</label>
-        </div>
+          </div>
 
-        <div className="input-box">
-            <input type="password" required 
-            value={password}
-            onChange={(e)=>{
+          <div className="input-box">
+            <input
+              type="password"
+              required
+              value={password}
+              onChange={(e) => {
                 setPassword(e.target.value);
-            }}
+              }}
             />
             <label>Password</label>
-        </div>
+          </div>
 
-        <button className='login-button' type="submit">Login</button>
+          <button className="login-button" type="submit">
+            Login
+          </button>
 
-        {message && <p className="success-msg">{message}</p>}
-
-    </form>
-
+          {/* f */}
+        </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
