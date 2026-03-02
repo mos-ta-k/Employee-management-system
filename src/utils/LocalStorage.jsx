@@ -14,7 +14,7 @@ export const employees = [
             active: true,
             newTask: true,
             completed: false,
-            failed: false
+            failed: false,
           },
           {
             title: "Fix Navbar Bug",
@@ -24,7 +24,7 @@ export const employees = [
             active: false,
             newTask: false,
             completed: true,
-            failed: false
+            failed: false,
           },
           {
             title: "Update Documentation",
@@ -34,9 +34,9 @@ export const employees = [
             active: false,
             newTask: false,
             completed: false,
-            failed: true
-          }
-        ]
+            failed: true,
+          },
+        ],
       },
       {
         id: 2,
@@ -51,7 +51,7 @@ export const employees = [
             active: true,
             newTask: true,
             completed: false,
-            failed: false
+            failed: false,
           },
           {
             title: "Form Validation",
@@ -61,7 +61,7 @@ export const employees = [
             active: false,
             newTask: false,
             completed: true,
-            failed: false
+            failed: false,
           },
           {
             title: "Error Handling",
@@ -71,9 +71,9 @@ export const employees = [
             active: false,
             newTask: false,
             completed: false,
-            failed: true
-          }
-        ]
+            failed: true,
+          },
+        ],
       },
       {
         id: 3,
@@ -88,7 +88,7 @@ export const employees = [
             active: true,
             newTask: true,
             completed: false,
-            failed: false
+            failed: false,
           },
           {
             title: "Optimize Queries",
@@ -98,7 +98,7 @@ export const employees = [
             active: false,
             newTask: false,
             completed: true,
-            failed: false
+            failed: false,
           },
           {
             title: "Backup Setup",
@@ -108,9 +108,9 @@ export const employees = [
             active: false,
             newTask: false,
             completed: false,
-            failed: true
-          }
-        ]
+            failed: true,
+          },
+        ],
       },
       {
         id: 4,
@@ -125,7 +125,7 @@ export const employees = [
             active: true,
             newTask: true,
             completed: false,
-            failed: false
+            failed: false,
           },
           {
             title: "Cross Browser Testing",
@@ -135,7 +135,7 @@ export const employees = [
             active: false,
             newTask: false,
             completed: true,
-            failed: false
+            failed: false,
           },
           {
             title: "Accessibility Fixes",
@@ -145,9 +145,9 @@ export const employees = [
             active: false,
             newTask: false,
             completed: false,
-            failed: true
-          }
-        ]
+            failed: true,
+          },
+        ],
       },
       {
         id: 5,
@@ -162,7 +162,7 @@ export const employees = [
             active: true,
             newTask: true,
             completed: false,
-            failed: false
+            failed: false,
           },
           {
             title: "Monitor Logs",
@@ -172,7 +172,7 @@ export const employees = [
             active: false,
             newTask: false,
             completed: true,
-            failed: false
+            failed: false,
           },
           {
             title: "Security Audit",
@@ -182,32 +182,31 @@ export const employees = [
             active: false,
             newTask: false,
             completed: false,
-            failed: true
-          }
-        ]
-      }
-    ]
-  }
+            failed: true,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
-export const admin = [{
-  admin: {
-    id: 1,
-    email: "admin@example.com",
-    password: "123"
-  }
-}];
+export const admin = [
+  {
+    admin: {
+      id: 1,
+      email: "admin@example.com",
+      password: "123",
+    },
+  },
+];
 
+export const setLocalStorage = () => {
+  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("admin", JSON.stringify(admin));
+};
+export const getLocalStarage = () => {
+  const employees = JSON.parse(localStorage.getItem("employees"));
+  const admin = JSON.parse(localStorage.getItem("admin"));
 
-export const setLocalStorage = () =>{
-    localStorage.setItem('employees', JSON.stringify(employees))
-    localStorage.setItem('admin', JSON.stringify(admin))
-}
-export const getLocalStarage = () =>{
-    const employees = JSON.parse(localStorage.getItem('employees'))
-    const admin = JSON.parse(localStorage.getItem('admin'))
-    
-    console.log(employees);
-    console.log(admin)
-    
-}
+  return { employees, admin };
+};
