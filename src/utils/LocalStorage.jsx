@@ -3,8 +3,17 @@ export const employees = [
     employees: [
       {
         id: 1,
+        name: "Rahim",
         email: "employee1@example.com",
         password: "123",
+
+        taskNumbers: {
+          active: 1,
+          newTask: 1,
+          completed: 1,
+          failed: 1,
+        },
+
         tasks: [
           {
             title: "Design Login Page",
@@ -38,10 +47,20 @@ export const employees = [
           },
         ],
       },
+
       {
         id: 2,
+        name: "Karim",
         email: "employee2@example.com",
         password: "123",
+
+        taskNumbers: {
+          active: 1,
+          newTask: 1,
+          completed: 1,
+          failed: 1,
+        },
+
         tasks: [
           {
             title: "API Integration",
@@ -75,10 +94,20 @@ export const employees = [
           },
         ],
       },
+
       {
         id: 3,
+        name: "Sahed",
         email: "employee3@example.com",
         password: "123",
+
+        taskNumbers: {
+          active: 1,
+          newTask: 1,
+          completed: 1,
+          failed: 1,
+        },
+
         tasks: [
           {
             title: "Database Schema",
@@ -105,80 +134,6 @@ export const employees = [
             description: "Configure database backup system",
             category: "DevOps",
             date: "2026-01-04",
-            active: false,
-            newTask: false,
-            completed: false,
-            failed: true,
-          },
-        ],
-      },
-      {
-        id: 4,
-        email: "employee4@example.com",
-        password: "123",
-        tasks: [
-          {
-            title: "UI Improvements",
-            description: "Improve dashboard UI",
-            category: "UI/UX",
-            date: "2026-01-13",
-            active: true,
-            newTask: true,
-            completed: false,
-            failed: false,
-          },
-          {
-            title: "Cross Browser Testing",
-            description: "Test app on multiple browsers",
-            category: "Testing",
-            date: "2026-01-09",
-            active: false,
-            newTask: false,
-            completed: true,
-            failed: false,
-          },
-          {
-            title: "Accessibility Fixes",
-            description: "Fix accessibility issues",
-            category: "UI/UX",
-            date: "2026-01-06",
-            active: false,
-            newTask: false,
-            completed: false,
-            failed: true,
-          },
-        ],
-      },
-      {
-        id: 5,
-        email: "employee5@example.com",
-        password: "123",
-        tasks: [
-          {
-            title: "Deploy Application",
-            description: "Deploy app to production server",
-            category: "DevOps",
-            date: "2026-01-14",
-            active: true,
-            newTask: true,
-            completed: false,
-            failed: false,
-          },
-          {
-            title: "Monitor Logs",
-            description: "Monitor application logs",
-            category: "Maintenance",
-            date: "2026-01-10",
-            active: false,
-            newTask: false,
-            completed: true,
-            failed: false,
-          },
-          {
-            title: "Security Audit",
-            description: "Perform basic security audit",
-            category: "Security",
-            date: "2026-01-07",
             active: false,
             newTask: false,
             completed: false,
