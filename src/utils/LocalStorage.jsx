@@ -9,7 +9,7 @@ export const employees = [
 
         taskNumbers: {
           active: 1,
-          newTask: 1,
+          newTask: 2,
           completed: 1,
           failed: 1,
         },
@@ -55,10 +55,10 @@ export const employees = [
         password: "123",
 
         taskNumbers: {
-          active: 1,
+          active: 2,
           newTask: 1,
-          completed: 1,
-          failed: 1,
+          completed: 3,
+          failed: 2,
         },
 
         tasks: [
@@ -102,10 +102,10 @@ export const employees = [
         password: "123",
 
         taskNumbers: {
-          active: 1,
+          active: 2,
           newTask: 1,
-          completed: 1,
-          failed: 1,
+          completed: 3,
+          failed: 2,
         },
 
         tasks: [

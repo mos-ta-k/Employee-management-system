@@ -1,13 +1,12 @@
-import React from 'react'
-import '../styles/adminDashboard.min.css'
-import Header from '../elements/Header'
-import CreateTask from '../elements/CreateTask'
 import AllTask from '../elements/AllTask'
+import CreateTask from '../elements/CreateTask'
+import Header from '../elements/Header'
+import '../styles/adminDashboard.min.css'
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ handleLogout }) => {
   return (
       <div className='adminDashboard'>
-        <Header/>
+        <Header handleLogout={handleLogout} />
         <CreateTask/>
         <AllTask/>
         

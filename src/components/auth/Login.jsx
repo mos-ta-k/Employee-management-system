@@ -51,8 +51,6 @@ const Login = ({ handleLogin }) => {
           <button className="login-button" type="submit">
             Login
           </button>
-
-          {/* f */}
         </form>
       </div>
     </div>

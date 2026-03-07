@@ -6,18 +6,23 @@ import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import { AuthContext } from "./context/authProvider";
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    try {
+      const loggedInUser = localStorage.getItem("loggedInUser");
+      return loggedInUser ? JSON.parse(loggedInUser).role : null;
+    } catch {
+      return null;
+    }
+  });
   const Authdata = useContext(AuthContext);
-  const [loggedInUserData, setLoggedInUserData] = useState(null);
-
-  // useEffect(() => {
-  //   if (Authdata) {
-  //     const loggedInUser = localStorage.getItem("loggedInUser");
-  //     if (loggedInUser) {
-  //       setUser(loggedInUser.role);
-  //     }
-  //   }
-  // }, [Authdata]);
+  const [loggedInUserData, setLoggedInUserData] = useState(() => {
+    try {
+      const loggedInUser = localStorage.getItem("loggedInUser");
+      return loggedInUser ? JSON.parse(loggedInUser).data : null;
+    } catch {
+      return null;
+    }
+  });
 
   const handleLogin = (email, password) => {
     if (email == "admin@me.com" && password == "123") {
@@ -40,21 +45,29 @@ const App = () => {
         setLoggedInUserData(employee);
         localStorage.setItem(
           "loggedInUser",
-          JSON.stringify({ role: "employee" }),
+          JSON.stringify({ role: "employee", data: employee }),
         );
+      } else {
+        alert("Invalid credentials!");
       }
     } else {
-      alert("invalid credentials!");
+      alert("Invalid credentials!");
     }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("loggedInUser");
+    setUser(null);
+    setLoggedInUserData(null);
   };
 
   return (
     <div>
       {!user ? <Login handleLogin={handleLogin} /> : ""}
       {user == "admin" ? (
-        <AdminDashboard />
+        <AdminDashboard handleLogout={handleLogout} />
       ) : user == "employee" && loggedInUserData ? (
-        <EmployeeDashboard data={loggedInUserData} />
+        <EmployeeDashboard data={loggedInUserData} handleLogout={handleLogout} />
       ) : null}
     </div>
   );
